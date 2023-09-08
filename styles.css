@@ -1,0 +1,73 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+
+h1 {
+    text-align: center;
+    color: #ffe81f;
+
+}
+h2 {
+    text-align: center;
+    color: #ffe81f;
+}
+main {
+    background-image: url("Star\ Wars.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: auto;
+    background-attachment: fixed;
+}
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+#buttonOne {
+    background-color: #ffe81f;
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 24px;
+    cursor: pointer;
+    display: block;
+    border-radius: 10px;
+}
+#buttonTwo {
+    background-color: #ffe81f;
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 24px;
+    cursor: pointer;
+    display: block;
+    border-radius: 10px;
+}
+#buttonThree {
+    background-color: #ffe81f;
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 24px;
+    cursor: pointer;
+    display: block;
+    border-radius: 10px;
+}
+#buttonFour {
+    background-color: #ffe81f;
+    /* text-align: center; */
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 24px;
+    cursor: pointer;
+    display: block;
+    border-radius: 10px;
+}
+#starForm {
+    text-align: center;
+    justify-content: center;
+}
