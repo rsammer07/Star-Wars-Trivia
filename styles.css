@@ -3,17 +3,28 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: auto;
+    visibility: visible;
 }
-
+body {
+    visibility:visible;
+}
 
 h1 {
     text-align: center;
     color: #ffe81f;
+    visibility: visible;
 
 }
 h2 {
     text-align: center;
     color: #ffe81f;
+    visibility: visible;
+}
+h3 {
+    text-align: center;
+    color: #ffe81f;
+    position: relative;
+    font-size: 35px;
 }
 main {
     background-image: url("Star\ Wars.jpg");
@@ -26,6 +37,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: visible;
   }
 #buttonOne {
     background-color: #ffe81f;
@@ -36,6 +48,7 @@ main {
     cursor: pointer;
     display: block;
     border-radius: 10px;
+    margin-bottom: 30px;
 }
 #buttonTwo {
     background-color: #ffe81f;
@@ -46,6 +59,7 @@ main {
     cursor: pointer;
     display: block;
     border-radius: 10px;
+    margin-bottom: 30px;
 }
 #buttonThree {
     background-color: #ffe81f;
@@ -56,6 +70,7 @@ main {
     cursor: pointer;
     display: block;
     border-radius: 10px;
+    margin-bottom: 30px;
 }
 #buttonFour {
     background-color: #ffe81f;
@@ -66,8 +81,22 @@ main {
     cursor: pointer;
     display: block;
     border-radius: 10px;
+    margin-bottom: 30px;
 }
 #starForm {
     text-align: center;
     justify-content: center;
+}
+#nextButton {
+    position: inherit;
+    margin-top: 3%;
+    margin-left: 97%;
+    background-color: #ffe81f;
+    /* text-align: center; */
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    /* padding: 10px 24px; */
+    cursor: pointer;
+    display: block;
+    border-radius: 10px;
 }
