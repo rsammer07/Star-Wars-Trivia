@@ -1,7 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
     width: auto;
     visibility: visible;
 }
@@ -27,14 +37,16 @@ h3 {
     font-size: 35px;
 }
 main {
-    background-image: url("Star\ Wars.jpg");
+    background-image: url("./Photos/Star\ Wars.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     position: auto;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
+    height: 100vh;
 }
 #buttonContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     visibility: visible;
@@ -47,7 +59,7 @@ main {
     padding: 10px 24px;
     cursor: pointer;
     display: block;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 30px;
 }
 #buttonTwo {
@@ -58,7 +70,7 @@ main {
     padding: 10px 24px;
     cursor: pointer;
     display: block;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 30px;
 }
 #buttonThree {
@@ -69,34 +81,59 @@ main {
     padding: 10px 24px;
     cursor: pointer;
     display: block;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 30px;
 }
 #buttonFour {
+    display: flex;
     background-color: #ffe81f;
     /* text-align: center; */
     border: 1px solid rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    padding: 10px 24px;
+    padding: 10px 200px;
     cursor: pointer;
     display: block;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 30px;
 }
 #starForm {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
 }
 #nextButton {
     position: inherit;
     margin-top: 3%;
-    margin-left: 97%;
+    margin-left: 90%;
     background-color: #ffe81f;
-    /* text-align: center; */
     border: 1px solid rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    /* padding: 10px 24px; */
+    padding: 10px 24px;
     cursor: pointer;
     display: block;
     border-radius: 10px;
+    visibility: hidden;
+}
+#ready {
+    visibility: visible;
+}
+
+#question{
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+#startButton {
+    display: flex;
+    flex-direction: column;
+    position: inherit;
+    margin-left: 47%;
+    background-color: #ffe81f;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 24px;
+    cursor: pointer;
+    display: block;
+    border-radius: 10px;
+    visibility: visible;
 }
