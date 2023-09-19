@@ -105,7 +105,7 @@ wrongAnswer = function() {
 correctAnswer = function() {
         scoreValue = scoreValue + 1;
         scoreDisplay.innerHTML = scoreValue;
-        main.style.backgroundImage = `url("./Photos/master-yoda.jpg")`;
+        main.style.backgroundImage = `url("./Photos/Yoda.jpg")`;
         nextButton.style.visibility = `visible`;
         hideElements();
 };
