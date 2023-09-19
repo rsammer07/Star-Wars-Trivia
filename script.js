@@ -1,18 +1,18 @@
 //--------cached elements--------//
-let question = document.querySelector(`#question`)
-let buttonContainer = document.querySelector(`#buttonContainer`)
-let scoreDisplay = document.querySelector(`#scoreValue`)
-let optionOne = document.querySelector(`#buttonOne`)
-let optionTwo = document.querySelector(`#buttonTwo`)
-let optionThree = document.querySelector(`#buttonThree`)
-let optionFour = document.querySelector(`#buttonFour`)
-let nextButton = document.querySelector(`#nextButton`)
-let starImage = document.querySelector(`#starImage`)
-let startButton = document.querySelector(`#startButton`)
+let question = document.querySelector(`#question`);
+let buttonContainer = document.querySelector(`#buttonContainer`);
+let scoreDisplay = document.querySelector(`#scoreValue`);
+let optionOne = document.querySelector(`#buttonOne`);
+let optionTwo = document.querySelector(`#buttonTwo`);
+let optionThree = document.querySelector(`#buttonThree`);
+let optionFour = document.querySelector(`#buttonFour`);
+let nextButton = document.querySelector(`#nextButton`);
+let starImage = document.querySelector(`#starImage`);
+let startButton = document.querySelector(`#startButton`);
 
 buttonContainer.style.visibility = `hidden`;
 //-----------constants-----------//
-const choices = [optionOne, optionTwo, optionThree, optionFour]
+const choices = [optionOne, optionTwo, optionThree, optionFour];
 
 const questions = [
     {
@@ -65,7 +65,7 @@ const questions = [
         choices: [`Jabba the Hutt`, `Emporer Palpatine`, `Old Ben Kanobi`, `Yoda`],
         correctAnswer: `Jabba the Hutt`,
     },
-]
+];
 
 //-----------variables-----------//
 let scoreValue = 0;
@@ -84,7 +84,7 @@ for (const choice of choices) {
         e.preventDefault();
         checkAnswer(choice.textContent)
     });
-}
+};
 //Now I need to establish an event listner to the nextButton
 nextButton.addEventListener(`click`, (e) => {
     e.preventDefault();
@@ -165,7 +165,7 @@ nextQuestion = function() {
         displayQuestion();
     } if (currentQuestionIndex >= questions.length) {
         checkScore();
-    }
+    };
 };
 //After user has answered all 10 questions I want the program to check users score and give them their final score screen.
 checkScore = function() {
