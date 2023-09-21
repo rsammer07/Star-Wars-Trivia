@@ -148,7 +148,6 @@ nextQuestion = function() {
     };
 };
 checkScore = function() {
-        resetButton.style.visibility = `visible`;
         nextButton.style.visibility = `hidden`;
         if (scoreValue <= 4) {
             hideElements();
