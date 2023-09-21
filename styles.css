@@ -41,7 +41,6 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     position: auto;
-    /* background-attachment: fixed; */
     height: 100vh;
 }
 #buttonContainer {
@@ -87,7 +86,6 @@ main {
 #buttonFour {
     display: flex;
     background-color: #ffe81f;
-    /* text-align: center; */
     border: 1px solid rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     padding: 10px 200px;

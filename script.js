@@ -8,7 +8,20 @@ let optionFour = document.querySelector(`#buttonFour`);
 let nextButton = document.querySelector(`#nextButton`);
 let starImage = document.querySelector(`#starImage`);
 let startButton = document.querySelector(`#startButton`);
+let resetButton = document.getElementById(`resetButton`);
+let audioBox = document.getElementById(`musicBox`);
+let theme = document.getElementById(`audioPlayerOne`);
+let right = document.getElementById(`audioPlayerTwo`);
+let wrong = document.getElementById(`audioPlayerThree`);
+let end = document.getElementById(`audioPlayerFour`);
+
+theme.volume = .15;
+right.volume = .15;
+wrong.volume = .15;
+end.volume = .15;
+
 buttonContainer.style.visibility = `hidden`;
+
 const choices = [optionOne, optionTwo, optionThree, optionFour];
 const questions = [
     {
@@ -65,10 +78,11 @@ const questions = [
 let scoreValue = 0;
 scoreDisplay.innerHTML = scoreValue;
 startButton.addEventListener(`click`, (e) => {
+    theme.play();
     e.preventDefault();
-    displayQuestion();
-    
+    displayQuestion();    
 });
+
 for (const choice of choices) {
     choice.addEventListener(`click`, (e) => {
         e.preventDefault();
@@ -80,13 +94,13 @@ nextButton.addEventListener(`click`, (e) => {
     nextQuestion();
 });
 wrongAnswer = function() {
+        playWrong();
         main.style.backgroundImage = `url("./Photos/Darth-Vader.png")`;
         nextButton.style.visibility = `visible`;
         hideElements();
 };
-
-
 correctAnswer = function() {
+        playRight();
         scoreValue = scoreValue + 1;
         scoreDisplay.innerHTML = scoreValue;
         main.style.backgroundImage = `url("./Photos/Yoda.jpg")`;
@@ -124,6 +138,7 @@ checkAnswer = function(answer) {
     };
   };
 nextQuestion = function() {
+    playTheme();
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
         showElements();
@@ -133,15 +148,45 @@ nextQuestion = function() {
     };
 };
 checkScore = function() {
+        resetButton.style.visibility = `visible`;
         nextButton.style.visibility = `hidden`;
         if (scoreValue <= 4) {
             hideElements();
             main.style.backgroundImage = `url("./Photos/padawan.jpeg")`
+
+            playEnd();
         } if (scoreValue >= 5 && scoreValue <= 9) {
             hideElements();
             main.style.backgroundImage = `url("./Photos/jedi-knight.jpeg")`
+            playEnd();
         } else if (scoreValue === 10) {
             hideElements();
             main.style.backgroundImage = `url("./Photos/jedi-master.jpeg")`
+            playEnd();
         };
     };
+    playTheme = function() {
+        if (right.pause !== true) {
+            right.pause();
+            theme.play();
+        } if (wrong.pause !== true) {
+            wrong.pause();
+            theme.play();
+        } if (end.pause !== true) {
+            end.pause();
+            theme.play();
+        }
+    };
+    playRight = function() {
+        theme.pause();
+        right.play();
+    };
+    playWrong = function() {
+        theme.pause();
+        wrong.play();
+    };
+    playEnd = function() {
+        theme.pause();
+        end.play();
+    }
+    
