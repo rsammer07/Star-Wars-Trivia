@@ -9,7 +9,6 @@ let nextButton = document.querySelector(`#nextButton`);
 let starImage = document.querySelector(`#starImage`);
 let startButton = document.querySelector(`#startButton`);
 let resetButton = document.getElementById(`resetButton`);
-let audioBox = document.getElementById(`musicBox`);
 let theme = document.getElementById(`audioPlayerOne`);
 let right = document.getElementById(`audioPlayerTwo`);
 let wrong = document.getElementById(`audioPlayerThree`);
